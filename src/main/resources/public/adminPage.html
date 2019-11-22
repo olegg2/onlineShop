@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin page</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+</head>
+
+<body>
+  
+    <div class="container">
+       <div style="margin: auto">
+   <h4 ><a  href="index.html">Go to main page</a></h4>
+   </div>
+        <div class="row col-md-9 col-md-offset-1">
+            
+            <form id="addAllForm">
+                <div class="form-group">
+                    <h1>Items adding</h1>
+                </div>
+
+                <div class="form-group">
+                    <label for="">title of location</label>
+                    <input type="text" class="form-control" id="locationCity" placeholder="City">
+                    <input type="text" class="form-control" id="locationStreet" placeholder="Street">
+                    <input type="number" class="form-control" id="locationHouse" placeholder="Number of house">
+                    <input type="number" class="form-control" id="locationFlat" placeholder="Number of flat">
+                    <button id="locationButton" type="submit" class="btn btn-success">add location</button>
+                </div>
+                <hr>
+                <div class="form-group">
+                    <label for="">title of type</label>
+                    <select id="categoryPage">
+                        <option selected hidden disabled>choose category</option>
+                    </select>
+                    <input type="text" class="form-control" id="typeTitle">
+                    <button id="typeButton" type="submit" class="btn btn-success">add type</button>
+                </div>
+                <hr>
+                <div class="form-group">
+                    <label for="">title of sort</label>
+                    <input type="text" class="form-control" id="sortTitle">
+                    <button id="sortButton" type="submit" class="btn btn-success">add sort</button>
+                </div>
+                <hr>
+                <div class="form-group">
+                    <label for="">title of developer</label>
+                    <input type="text" class="form-control" id="developerTitle">
+                    <button id="developerButton" type="submit" class="btn btn-success">add developer</button>
+                </div>
+                <hr>
+                <div class="form-group">
+                    <label for="">add description</label>
+                    <input type="text" class="form-control" id="descriptionTitle">
+                    <button id="descriptionButton" type="submit" class="btn btn-success">add description</button>
+                </div>
+                <hr>
+                
+
+
+
+            </form>
+
+        </div>
+        
+        
+        
+
+    </div>
+
+    <div class="container">
+        <div class="row col-md-9 col-md-offset-1">
+           <div class="col">
+            <form id="addCommodityForm">
+                <div class="form-group">
+                    <h1>Commodity adding</h1>
+                </div>
+                <div class="form-group">
+                    <label for="">title of commodity</label>
+                    <input type="text" class="form-control" id="commodityTitle">
+                </div>
+                <div class="form-group ">
+                    <label for="">date of adding</label>
+                    <div class="input-group">
+                        <input id="day" type="number" class="form-control" placeholder="dd">
+                        <input id="month" type="number" class="form-control" placeholder="mm">
+                        <input id="year" type="number" class="form-control" placeholder="yy"> 
+                    </div>
+                </div>
+                <div class="form-group">
+                        <label for="">state</label>
+                        <select id="statePage">
+                            <option selected hidden disabled>choose state</option>
+                            <option value="good">good</option>
+                            <option value="b/y">b/y</option>
+                            <option value="bad">bad</option>
+                        </select>
+                </div>
+                <div class="form-group">
+                    <label for="">description</label>
+                    <select id="descriptionPage">
+                        <option selected hidden disabled>choose description</option>
+                    </select>
+                </div>
+
+
+
+                <div class="form-group">
+                        <label for="">title of developer</label>
+                        <select id="developerPage">
+                            <option selected hidden disabled>choose developer</option>
+                        </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="">location</label>
+                    <select id="locationPage">
+                        <option selected hidden disabled>choose location</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="">number in stock</label>
+                    <input type="text" class="form-control" id="inStock">
+                </div>
+
+                <div class="form-group">
+                    <label for="">price</label>
+                    <input type="number" class="form-control" id="price">
+                </div>
+
+
+
+
+
+
+                <div class="form-group">
+                    <div class="row ">
+                        <div class="col-md-3">
+                            <select id="typePage">
+                                <option selected hidden disabled>choose type</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select id="sortPage">
+                                <option selected hidden disabled>choose sort</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select id="picturePage">
+                                <option selected hidden disabled>choose image</option>
+                            </select>
+                        </div>
+                        
+
+                        <div class="col-md-3">
+                            <select id="userSellerPage">
+                                <option selected hidden disabled>choose user seller</option>
+                            </select>
+                        </div>
+
+
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-success">add commodity</button>
+            </form>
+            </div>
+        </div>
+
+         </div>
+
+         <div class="row">
+            <table class="table table-striped" id="CommodityTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Id of Commodity</th>
+                        <th>Date of adding </th>
+                        <th>State</th>
+                        <th>Price</th>
+                        <th>In stock</th>
+                        <th>Description</th>
+                        <th>Developer</th>
+                        <th>Location</th>
+                        <th>Type</th>
+                        <th>Sort</th>
+                        <th>Image</th>
+                        <th>User seller</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+    
+
+    <script ddsrc="js/bootstrap.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+
+    <script>
+        let serverUrl = 'http://localhost:8080/';
+        /////////////////////////////////////////////////////// 
+
+        $("#testButton").click(function() {
+            var str = $('#testMonth').val();
+            console.log(str);
+        });
+        ///////////
+        getTypes();
+        getSorts();
+        getLocations();
+        getDevelopers();
+        getDescriptions();
+        getUserSellers();
+        getPictures();
+        getCategories();
+
+
+
+        ////////////////////////////////////////////////////////////////
+        $(document).ready(function(e) {
+            getCommodity();
+            e.preventDefault;
+
+
+
+        });
+        /////////////////////////////////////////////
+        $('#addCommodityForm').submit(function(e) {
+            e.preventDefault();
+
+
+            let commodityTitle = $("#commodityTitle").val();
+            let dateOfAdding = $("#day").val() + "/" + $("#month").val() + "/" + $("#year").val();
+            console.log(dateOfAdding);
+            let state = $("select#statePage option:checked").val();
+            let price = $("#price").val();
+            //////////////////////////////
+            let descriptionContent = $("#descriptionPage").val();
+            console.log(descriptionContent);
+            let description = {
+                id: descriptionContent
+            };
+            /////////////////////////////
+            let locationId = $("select#locationPage option:checked").val();
+            console.log(locationId);
+            let location = {
+                id: locationId
+            };
+            //////////////////////////////
+            let developerId = $("select#developerPage option:checked").val();
+            let developer = {
+                id: developerId
+            };
+            //////////////////////////////
+            let typeId = $("select#typePage option:checked").val();
+            let type = {
+                id: typeId
+            };
+            //////////////////////////////
+            let sortId = $("select#sortPage option:checked").val();
+            let sort = {
+                id: sortId
+            };
+            //////////////////////////////
+            let picture = $("select#picturePage option:checked").val();
+            let inStock = $("#inStock").val();
+            //////////////////////////////
+            let user = $("select#userSellerPage option:checked").val();
+            let userSeller = {
+                id: user
+            }
+
+            /////////////////////////////
+            let commodity = {
+                commodityTitle: commodityTitle,
+                dateOfAdding: dateOfAdding,
+                idOfCommodity: 123,
+                picture: picture,
+                state: state,
+                price: price,
+                description: description,
+                location: location,
+                developer: developer,
+                inStock: inStock,
+                type: type,
+                sort: sort,
+                userSeller: userSeller
+
+            }
+            console.log(commodity);
+            $.ajax({
+                url: 'http://localhost:8080/commodity',
+                type: 'POST',
+                dataType: 'json',
+                contentType: 'application/json',
+                data: JSON.stringify(commodity),
+                complete: function(data) {
+                    console.log("posting commodity");
+                    if (data.status == 500) {
+                        console.log("Error ocurred on server");
+                    }
+                    if (data.status == 201) {
+
+                        $("#addCommodityForm")[0].reset();
+                        $("#commodityTable tbody").empty();
+                        getCommodity();
+                    }
+
+                }
+            });
+        });
+        //////////////////////////////////////////////////////
+
+        function postCommodity() {
+            $.ajax({
+                url: 'http://localhost:8080/commodity',
+                type: 'POST',
+                dataType: 'json',
+                contentType: 'application/json',
+                data: JSON.stringify(commodity),
+                complete: function(data) {
+                    console.log("posting commodity");
+                    window.location.reload(true);
+                    if (data.status == 500) {
+                        console.log("Error ocurred on server");
+                    }
+                    if (data.status == 201) {
+
+                        $("#addCommodityForm")[0].reset();
+                        $("#commodityTable tbody").empty();
+                        window.location.reload(true);
+                        getCommodity();
+                    }
+
+                }
+            });
+        }
+
+
+        /////////////////////////////////////////////////////
+        function getCommodity() {
+            $.ajax({
+                url: serverUrl + 'commodity',
+                method: 'GET',
+                dataType: 'json',
+                contantType: 'application/json',
+                success: function(response) {
+                    console.log(response);
+                    var numb = 0;
+                    $.each(response, function(key, value) {
+                        // console.log(numb++);
+                        $('#CommodityTable tbody').append(
+                            `
+                                <tr>
+                                    <td>${value.id}</td>
+                                    <td>${value.commodityTitle}</td>
+                                    <td>${value.idOfCommodity}</td>
+                                    <td>${value.dateOfAdding}</td>
+                                     <td>${value.state }</td>
+                                     <td>${value.price }</td>
+                                     <td>${value.inStock }</td>
+                                     <td>${value.description}</td>
+                                    <td>${value.developer}</td>
+                                     <td>${value.location.titleOfStreet }, ${value.location.titleOfCity}</td>
+                                     <td>${value.type }</td>
+                                     <td>${value.sort}</td> 
+                                     <td>${value.picture}</td> 
+                                     <td>${value.userSeller }</td>
+                                </tr>
+                                `
+                        );
+                    });
+                }
+
+            })
+
+        }
+        ////////////////////////////////////////////////////////
+        function getTypes() {
+            $.ajax({
+                url: serverUrl + 'type',
+                method: 'GET',
+                dataType: 'json',
+                contantType: 'application/json',
+                success: function(response) {
+                    console.log(response);
+                    var numb = 0;
+                    $.each(response, function(key, value) {
+                        $("#typePage").append(`<option value='${value.id}'>${value.typeTitle}</option>`);
+
+                    });
+                }
+
+            });
+        }
+        /////////////////////////////////////////////////////////////////
+        function getSorts() {
+            $.ajax({
+                url: serverUrl + 'sort',
+                method: 'GET',
+                dataType: 'json',
+                contantType: 'application/json',
+                success: function(response) {
+                    console.log(response);
+                    var numb = 0;
+                    $.each(response, function(key, value) {
+                        $("#sortPage").append(`<option value='${value.id}'>${value.sortTitle}</option>`);
+
+                    });
+                }
+
+            });
+        }
+        ///////////////////////////////////////////////////////////////// 
+        function getLocations() {
+            $.ajax({
+                url: serverUrl + 'location',
+                method: 'GET',
+                dataType: 'json',
+                contantType: 'application/json',
+                success: function(response) {
+                    console.log(response);
+                    var numb = 0;
+                    $.each(response, function(key, value) {
+                        $("#locationPage").append(`<option value='${value.id}'>${value.titleOfCity}
+        /${value.titleOfStreet}  ${value.numberOfHouse}/${value.numberOfFlat}</option>`);
+
+                    });
+                }
+
+            });
+        }
+        /////////////////////////////////////////////////////////////////
+        function getDevelopers() {
+            $.ajax({
+                url: serverUrl + 'developer',
+                method: 'GET',
+                dataType: 'json',
+                contantType: 'application/json',
+                success: function(response) {
+                    console.log(response);
+                    var numb = 0;
+                    $.each(response, function(key, value) {
+                        $("#developerPage").append(`<option value='${value.id}'>${value.developerTitle}</option>`);
+
+                    });
+                }
+
+            });
+        }
+        /////////////////////////////////////////////////////////////
+        function getDescriptions() {
+            $.ajax({
+                url: serverUrl + 'description',
+                method: 'GET',
+                dataType: 'json',
+                contantType: 'application/json',
+                success: function(response) {
+                    console.log(response);
+                    var numb = 0;
+                    $.each(response, function(key, value) {
+                        $("#descriptionPage").append(`<option value='${value.id}'>${value.descriptionContent}</option>`);
+
+                    });
+                }
+
+            });
+        }
+        ///////////////////////////////////////////////////////////
+        function getUserSellers() {
+            $.ajax({
+                url: serverUrl + 'user',
+                method: 'GET',
+                dataType: 'json',
+                contantType: 'application/json',
+                success: function(response) {
+                    console.log(response);
+                    var numb = 0;
+                    $.each(response, function(key, value) {
+                        $("#userSellerPage").append(`<option value='${value.id}'>${value.name}</option>`);
+
+                    });
+                }
+
+            });
+        }
+        ////////////////////////////////////////////////////////
+        function getPictures() {
+            $.ajax({
+                url: serverUrl + 'commodity',
+                method: 'GET',
+                dataType: 'json',
+                contantType: 'application/json',
+                success: function(response) {
+                    console.log(response);
+                    var numb = 0;
+                    $.each(response, function(key, value) {
+                        $("#picturePage").append(`<option value='${value.picture}'>${value.picture}</option>`);
+
+                    });
+                }
+
+            });
+        }
+        /////////////////////////////////////////////
+        function getCategories() {
+            $.ajax({
+                url: serverUrl + 'category',
+                method: 'GET',
+                dataType: 'json',
+                contantType: 'application/json',
+                success: function(response) {
+                    console.log(response);
+
+                    $.each(response, function(key, value) {
+                        $("#categoryPage").append(`<option value='${value.id}'>${value.categoryTitle}</option>`);
+
+                    });
+                }
+
+            });
+        }
+        ////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////
+        $("#sortButton").click(function(e) {
+            var str = $('#sortTitle').val();
+            var sort = {
+                sortTitle:str
+            };
+            console.log(str);
+            e.preventDefault();
+            $.ajax({
+                url: 'http://localhost:8080/sort',
+                type: 'POST',
+                dataType: 'json',
+                contentType: 'application/json',
+                data: JSON.stringify(sort),
+                complete: function(data) {
+                    console.log("posting sort");
+
+                        console.log("updated");
+                        console.log("updated");
+                        console.log("updated");
+                   
+
+                }
+            });
+
+        });
+        /////////////////////////
+        $("#developerButton").click(function(e) {
+            var str = $('#developerTitle').val();
+            var developer = {
+                developerTitle: str
+            };
+            e.preventDefault();
+            console.log(str);
+            $.ajax({
+                url: 'http://localhost:8080/developer',
+                type: 'POST',
+                dataType: 'json',
+                contentType: 'application/json',
+                data: JSON.stringify(developer),
+                complete: function(data) {
+                    console.log("posting developer");
+                   
+                        console.log("updated");
+                    
+
+                }
+            });
+
+        });
+        //////////////////////////
+        $("#descriptionButton").click(function(e) {
+            var str = $('#descriptionTitle').val();
+            var description = {
+                descriptionContent: str
+            };
+            e.preventDefault();
+            console.log(str);
+            $.ajax({
+                url: 'http://localhost:8080/description',
+                type: 'POST',
+                dataType: 'json',
+                contentType: 'application/json',
+                data: JSON.stringify(description),
+                complete: function(data) {
+                    console.log("posting description");
+                   
+                        console.log("updated");
+                    
+
+                }
+            });
+
+        });
+        /////////////////////////////
+        $("#typeButton").click(function(e) {
+            var str = $('#typeTitle').val();
+            var categoryVal = $("select#categoryPage option:checked").val();
+            var type = {
+                    typeTitle: str,
+                    categoryId: categoryVal
+            };
+            e.preventDefault();
+            console.log(str);
+            $.ajax({
+                url: 'http://localhost:8080/sort',
+                type: 'POST',
+                dataType: 'json',
+                contentType: 'application/json',
+                data: JSON.stringify(type),
+                complete: function(data) {
+                    console.log("posting type");
+                   
+                        console.log("updated");
+                 
+
+                }
+            });
+
+        });
+        ///////////////////////////////
+        $("#locationButton").click(function(e) {
+           
+            var str1 = $('#locationCity').val();
+            var str2 = $('#locationStreet').val();
+            var str3 = $('#locationHouse').val();
+            var str4 = $('#locationFlat').val();
+
+            var location = {
+                titleOfCity: str1,
+                titleOfStreet: str2,
+                numberOfHouse: str3,
+                numberOfFlat: str4
+            };
+            e.preventDefault();
+            console.log(str1);
+            
+            $.ajax({
+                url: 'http://localhost:8080/location',
+                type: 'POST',
+                dataType: 'json',
+                contentType: 'application/json',
+                data: JSON.stringify(location),
+                complete: function(data) {
+                    console.log("posting location");
+                    
+                        console.log("updated");
+                    
+
+                }
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1110 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ALLFORHOME SHOP</title>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+    <link rel="stylesheet" href="css/slicknav.min.css" />
+    <link rel="stylesheet" href="css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+    <!-- Page Preloder
+<div id="preloder">
+    <div class="loader"></div>
+</div>
+-->
+
+    <!-- Header section -->
+    <header class="header-section">
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 text-center text-lg-left">
+                        <!-- logo -->
+                        <a href="./index.html" class="site-logo">
+                            <img src="img/allforhomeshopLOGO.png" alt="">
+                        </a>
+                    </div>
+
+
+                    <div class="col-xl-6 col-lg-5 my-auto">
+                        <form class="header-search-form">
+                            <input id="searchByNameInput" type="text" placeholder="Search by title">
+                            <button id="searchButtonByFilter"><i class="flaticon-search"></i></button>
+                        </form>
+                    </div>
+
+
+
+
+                    <div class="col-xl-4 col-lg-5 my-auto ">
+                        <div class="user-panel row">
+
+
+
+
+
+                            <div class="up-item align-middle" id="userRegistration">
+                                <i class="flaticon-profile"></i>
+                                <a href="signin.html">Sign</a> In or <a href="createAccount.html">Create Account</a>
+                            </div>
+                            <div class="up-item" id="userMenu" style="display: none">
+                                <i class="flaticon-profile"></i>
+                                <a id="username"> </a>
+                                <a id="userExit">log out</a>
+
+                            </div>
+
+                            <div class="up-item align-middle">
+                                <div class="shopping-card">
+                                    <i class="flaticon-bag"></i>
+                                    <span id="numberOfCommodity">0</span>
+                                </div>
+
+
+
+                                <div class="nav navbar-nav navbar-right">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shopping Cart</a>
+                                    <div class="dropdown-menu" style="width: 600px">
+                                        <div class="panel panel-succes">
+                                            <div class="panel-heading text-center">
+
+                                                <table class="table" style="margin: auto" id="CommodityTableBasket">
+                                                    <thead class="thead-dark">
+                                                        <tr>
+                                                            <th>ID</th>
+                                                            <th>Title</th>
+                                                            <th>Image</th>
+                                                            <th>Type</th>
+                                                            <th>Price</th>
+                                                            <th>delete</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody></tbody>
+                                                </table>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="up-item ">
+
+                                <a href="adminPage.html">Go to admin page</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <nav class="main-navbar">
+            <div class="container">
+                <!-- menu -->
+                <ul id="category-menu" class="main-menu">
+                    <li><a onclick="getCommodityFullBy('commodity/page?direction=ASC&page=0&size=12&sortBy=commodityTitle')" href="#">Home</a><span class="new">New</span></li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Header section end -->
+
+    <!-- Hero section -->
+    <section class="hero-section">
+        <div class="hero-slider owl-carousel my-slider">
+            <div class="hs-item set-bg" data-setbg="img/product/CyberRaiden.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-7 text-white">
+                            <span>New Arrivals</span>
+                            <h2>Test element</h2>
+                            <p>Raiden, real name Jack,was a Liberian-American mercenary and former special forces soldier. Previously a child soldier under Solidus Snake, Raiden was later selected by the Patriots to test the S3 Plan at the Big Shell, as a new recruit to the reformed FOXHOUND unit. </p>
+                            <a href="#" class="site-btn sb-line">DISCOVER</a>
+                            <a href="#" class="site-btn sb-white">ADD TO CART</a>
+                        </div>
+                    </div>
+                    <div class="offer-card text-white">
+                        <span>from</span>
+                        <h2>$∞</h2>
+                        <p>SHOP NOW</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container">
+            <div class="slide-num-holder" id="snh-1"></div>
+        </div>
+    </section>
+    <!-- Hero section end -->
+
+
+
+
+    <!-- Product filter section -->
+    <section class="product-filter-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>BROWSE TOP SELLING PRODUCTS</h2>
+            </div>
+
+
+
+
+
+            <ul class="main-menu-s">
+                <li><a href="#"> Title</a>
+                    <ul class="sub-menu-s">
+                        <li><input id="titleForSearch" type="text" placeholder="write title"></li>
+                    </ul>
+                </li>
+                <li><a>Developer</a>
+                    <ul class="sub-menu-s">
+                        <li><input id="developerForSearch" type="text" placeholder="write developer"></li>
+                    </ul>
+                </li>
+                <li><a>Price</a>
+                    <ul class="sub-menu-s">
+                        <li class="input-group">
+                            <div class="input-group">
+                                <input id="priceFrom" style="width: 110px" type="text" placeholder="from">
+                                <input id="priceTo" style="width: 110px" type="text" placeholder="to">
+                            </div>
+                        </li>
+
+                    </ul>
+                </li>
+                <li><a>Type</a>
+                    <ul class="sub-menu-s">
+                        <li>
+                            <div>
+                                <select id="typePageForSearch">
+                                    <option >choose type</option>
+                                </select>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li><a>Sort</a>
+                    <ul class="sub-menu-s">
+                        <li>
+                            <div>
+                                <select id="sortPageForSearch">
+                                    <option >choose sort</option>
+                                </select>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li><a>State</a>
+                    <ul class="sub-menu-s">
+                        <li>
+                            <div>
+                                <select id="statePageForSearch">
+                                    <option >choose state</option>
+                                    <option value="good">good</option>
+                                    <option value="b/y">b/y</option>
+                                    <option value="bad">bad</option>
+                                </select>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li> <button id="SearchForAllButton" class="site-btn " type="submit">SEND</button></li>
+            </ul>
+            <p></p>
+
+
+
+
+
+
+
+
+
+
+            <div class="row justify-content-center products">
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="product-item">
+                        <div class="pi-pic">
+                            <img class="img-config" src="./img/product/rag.jpg" alt="">
+                            <div class="pi-links">
+                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                                <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                            </div>
+                        </div>
+                        <div class="pi-text">
+                            <h6>$35,00</h6>
+                            <p>Book 1 </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="product-item">
+                        <div class="pi-pic">
+                            <img class="img-config" src="./img/product/thrillerParadisePhotos/3.jpg" alt="">
+                            <div class="pi-links">
+                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                                <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                            </div>
+                        </div>
+                        <div class="pi-text">
+                            <h6>$35,00</h6>
+                            <p>Book 3 </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-sm-6">
+                    <div class="product-item">
+                        <div class="pi-pic">
+                            <img class="img-config" src="./img/product/thrillerParadisePhotos/10.jpg" alt="">
+                            <div class="pi-links">
+                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                                <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                            </div>
+                        </div>
+                        <div class="pi-text">
+                            <h6>$35,00</h6>
+                            <p>Book 10 </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center pt-5">
+                <button class="site-btn sb-line sb-dark" id="buttonBack">Back</button>
+                <button class="site-btn sb-line sb-dark" id="buttonNext">Next</button>
+            </div>
+
+
+        </div>
+    </section>
+    <!-- Product filter section end -->
+
+
+    <!-- Banner section -->
+    <section class="banner-section">
+        <div class="container">
+            <div class="banner set-bg" data-setbg="img/banner-bg.jpg">
+                <div class="tag-new">NEW</div>
+                <span>New Arrivals</span>
+                <h2>STRIPED SHIRTS</h2>
+                <a href="#" class="site-btn">SHOP NOW</a>
+            </div>
+        </div>
+    </section>
+    <!-- Banner section end  -->
+
+
+    <script>
+        var count = 0;
+        var pageCount = 0;
+        let serverUrl = 'http://localhost:8080/';
+        getCommodityOn("commodity");
+        getCategories();
+        getCommodityOfUser();
+        getUserFromStorage();
+
+        getTypesForSearch();
+        getSortsForSearch();
+        //////////////////////////////////////////////////
+
+        $(document).ready(function() {
+            getCommodityFullBy("commodity/page?direction=ASC&page=0&size=10&sortBy=commodityTitle");
+
+
+        });
+
+        ///////////////////////////////////
+        $("#buttonBack").click(function() {
+            if(pageCount>0){
+                 pageCount--;
+                getCommodityFullBy("commodity/page?direction=ASC&page="+pageCount+"&size=10&sortBy=commodityTitle");
+               
+                }
+           
+            console.log("pageCount" + pageCount);
+        });
+        
+        $("#buttonNext").click(function() {
+          pageCount++;
+         getCommodityFullBy("commodity/page?direction=ASC&page="+pageCount+"&size=10&sortBy=commodityTitle");
+                
+           
+            console.log("pageCount" + pageCount);
+        });
+        
+        
+        
+        
+
+
+
+
+        ///////////////////////////////////search
+        $("#searchButtonByFilter").click(function(e) {
+            e.preventDefault();
+
+            $(".product-item").empty();
+            let title = $("#searchByNameInput").val();
+            console.log(title);
+            /*if (title == "") {
+                getCommodityBy('commodity');
+            } else {*/
+            getCommodityFullBy('commodity/filter?page=0&size=10&sortBy=commodityTitle&name=' + title + '&direction=ASC');
+            //}
+
+        });
+
+        ////////////////////////////////////////
+        function getUserFromStorage() {
+            var currentUser = localStorage.getItem("currentUser");
+            var currentUserId = localStorage.getItem("currentUserId");
+            console.log("username = " + currentUser + " id" + currentUserId);
+            if (currentUser != undefined && currentUser != null) {
+                $('#userRegister').css('display', 'none');
+
+                $.ajax({
+                    url: serverUrl + 'user/' + currentUserId,
+                    method: 'GET',
+                    dataType: 'json',
+                    contantType: 'application/json',
+                    success: function(response) {
+                        console.log(response);
+                        $("#userMenu").css('display', 'block');
+                        $("#userRegistration").css('display', 'none');
+
+                        $("#username").append(`<a name='${response.id}'><h5>${response.name}</h5></a>`);
+
+
+
+                    }
+
+                });
+
+
+            }
+        }
+
+        ////////////////////////////////////////        
+        function addToCart(myKey) {
+            console.log("mykey " + myKey);
+            var commodityId = myKey;
+            var userId = localStorage.getItem("currentUserId");
+            console.log("mykey = " + myKey + " user id = " + userId);
+            $.ajax({
+                url: serverUrl + 'user/addToBasket?commodityId=' + commodityId + '&userId=' + userId,
+                method: 'POST',
+                contentType: 'application/json',
+                success: function(response) {
+
+                    console.log("succesful adding");
+                    getCommodityOfUser();
+
+                }
+            });
+        }
+
+
+        ///////////////////////////////////////////////        
+        $("#userExit").click(function() {
+            localStorage.removeItem("currentUser");
+            localStorage.removeItem("currentUserId");
+            window.location.reload();
+        });
+
+
+        ////////////////////////////////////////
+
+        function getCommodityFullBy(myKey) {
+            $.ajax({
+                url: serverUrl + myKey,
+                method: 'GET',
+                dataType: 'json',
+                contantType: 'application/json',
+                success: function(response) {
+                    console.log(response);
+                    $(".products").empty();
+                    count = 0;
+                    $.each(response.data, function(key, value) {
+                        // let ratingStar=★;
+                        count++;
+                        $('.products').append(
+                            `
+    
+
+           <div class="col-lg-3 col-sm-6 product-border" >
+                    <div class="product-item">
+                        <div class="pi-pic">
+                            <img class="img-config" src=".${value.picture}" alt="">
+                            <div class="pi-links">
+                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                                <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                            </div>
+                        </div>
+                        <div class="pi-text">
+                            <hr/>
+                            <h6>$${value.price}</h6>
+                            <p class="clickToHide" id="tid${count}">${value.commodityTitle}</p>
+                        </div>
+                    </div>
+            </div>
+
+ 
+
+
+
+<div class="col-lg-6 product-border id="itid${count}" >
+
+                        <div class="row" > 
+                                    <div class="col">
+                                            <h5>Description:</h5>
+                                            <p>${value.description}</p>
+                                            <hr/>  
+                                    </div>
+                        
+                        </div>
+
+                        <div class="row" >
+                                    <div class="col-md-4" >
+                                        <h6>Date of adding:</h6>
+                                        <p>${value.dateOfAdding}</p>
+                                        <h6>Location:</h6>
+                                        <p>${value.location.titleOfCity}/${value.location.titleOfStreet} ||${value.location.numberOfHouse}/${value.location.numberOfFlat}</p>
+                                        
+                                    </div>
+
+
+                                    <div class="col-md-4" >
+                                                <h6>State:</h6>
+                                                <p>${value.state}</p>
+                                                <h6>Type and Sort </h6>
+                                                <p>${value.type} ${value.sort}</p>
+                                                
+                                               
+                                    </div>
+
+
+
+                                    <div class="col-md-4">
+                                                
+                                                <h6>number of available: ${value.inStock}</h6>
+                                                <p></p>
+                                                <h6>Seller:</h6>
+                                                <p>${value.userSeller}</p>
+                                                <h6>Developer:</h6>
+                                                <p>${value.developer}</p>
+                                            
+                                                
+                                            
+                                    </div>
+
+                       </div>   
+                        
+                        <div class="row" >
+                                                <div class="col">
+                                                        
+                                                </div>
+                                                <div class="col">
+                                                        <button class="site-btn " type="submit" onclick="return addToCart(${value.id})" >add to cart</button>
+                                                </div>
+                                                <div class="col">
+                                                        
+                                                </div>
+
+                        </div>
+                                                                      
+
+</div>
+
+
+                                `
+                        );
+
+                    });
+
+                },
+                error: function(){
+                    pageCount--;
+                }
+
+            })
+
+        }
+
+
+
+
+
+
+
+
+
+        function getCommodityOn(myKey) {
+            $.ajax({
+                url: serverUrl + myKey,
+                method: 'GET',
+                dataType: 'json',
+                contantType: 'application/json',
+                success: function(response) {
+                    console.log(response);
+
+                    var count = 1;
+                    $.each(response, function(key, value) {
+                        if (count % 2 == 0) {
+                            //    var imageUrl="img/product/StandartRaiden.jpg"
+                            //  if(value.image!="picture")
+                            //    imageUrl=value.image;
+                            $('.my-slider').append(
+                                `
+                       <div class="hs-item set-bg" data-setbg=".${value.picture}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-7 text-white">
+                            <span>New Arrivals</span>
+                            <h2>${value.type} :${value.commodityTitle}</h2>
+                          
+                            <p>${value.description} </p>
+                            <a href="#"  class="site-btn sb-line" onclick="return  getCommodityFullBy('commodity/filter?page=0&size=10&sortBy=commodityTitle&name=${value.commodityTitle}&direction=ASC')
+          ">DISCOVER</a>
+                            <a href="#" class="site-btn sb-white" onclick="return addToCart(${value.id})">ADD TO CART</a>
+                        </div>
+                    </div>
+                    <div class="offer-card text-white">
+                        <span>from</span>
+                        <h2>$${value.price}</h2>
+                        <p>SHOP NOW</p>
+                    </div>
+                </div>
+            </div>
+                                `
+                            );
+                        }
+                        count++;
+
+                    });
+
+                }
+
+            })
+
+        };
+        //////////////////////////////////////////////////////////////
+        function getCategories() {
+            $.ajax({
+                type: 'GET',
+                url: "http://localhost:8080/category",
+                dataType: 'json',
+                contentType: 'application/json'
+            }).done(function(response) {
+                console.log('Response', response);
+                var categories = response;
+                console.log(categories.length+"---------------------");
+                //$('#categories').empty();
+                for (var i = 0; i < categories.length; i++) {
+                    var category = categories[i];
+                    $('#category-menu').append('<li ><a href="javascript:void(0)">' + category.categoryTitle + '</a>' +
+                        '<ul id="li' + i + '" class="sub-menu"> </li></ul>');
+
+
+                    for (var j = 0; j < category.types.length; j++) {
+                        var type = category.types[j];
+                        $('#li' + i + '').append('<li><a href="javascript:void(0)" onclick="filterByType(' + type.id + ')" >' + type.typeTitle + '</a></li>');
+                       
+                    }
+
+                }
+            }).fail(function(e) {
+                alert(e.message);
+                console.log("mistake", e);
+            })
+        }
+//////////////////////////////////////////////////////////////////
+       
+        function filterByType(myKey) {
+            console.log("type id = " + myKey);
+            getCommodityFullBySimple("commodity/getAllCommodityByType?id="+myKey);
+
+
+
+        }
+
+        ////////////////////////////////////////////////////////
+        function getCommodityOfUser() {
+
+            var currentUser = localStorage.getItem("currentUserId");
+            $.ajax({
+                url: serverUrl + 'user/' + currentUser,
+                method: 'GET',
+                dataType: 'json',
+                contantType: 'application/json',
+                success: function(response) {
+                    console.log(response);
+                    $('#CommodityTableBasket tbody').empty();
+                    var numb = 0;
+                    $.each(response.userBasket, function(key, value) {
+                        // console.log(numb++);
+                        $('#CommodityTableBasket tbody').append(
+                            `
+                                <tr>
+                                    <td>${value.id}</td>
+                                    <td>${value.commodityTitle}</td>
+                                    <td><img class="img-config" style="width:100px" src=".${value.picture}" alt=""></td> 
+
+                                    <td>${value.type }</td>
+                                    <td>$${value.price }</td>
+                                    <td><button type="submit" onclick="return deleteCommodity(${value.id })">x</button></td>
+                                </tr>
+                                `
+                        );
+                    });
+                }
+
+            })
+
+        };
+
+
+        function deleteCommodity(myKey) {
+            var id = myKey;
+            var userId = localStorage.getItem("currentUserId");
+            console.log(myKey + " !! " + userId);
+            $.ajax({
+                url: 'http://localhost:8080/user/deleteFromBasket?commodityId=' + id + '&userId=' + userId,
+                type: 'DELETE',
+                dataType: 'json',
+                contentType: 'application/json',
+                complete: function(data) {
+                    console.log("deleting commodity");
+                    getCommodityOfUser();
+
+                    console.log("updated");
+                }
+
+            });
+        }
+        //////////////////////////////////////////////////////////
+        function getTypesForSearch() {
+            $.ajax({
+                url: serverUrl + 'type',
+                method: 'GET',
+                dataType: 'json',
+                contantType: 'application/json',
+                success: function(response) {
+                    console.log(response);
+                    var numb = 0;
+                    $.each(response, function(key, value) {
+                        $("#typePageForSearch").append(`<option value='${value.id}'>${value.typeTitle}</option>`);
+
+                    });
+                }
+
+            });
+        };
+
+        ///////
+        function getSortsForSearch() {
+            $.ajax({
+                url: serverUrl + 'sort',
+                method: 'GET',
+                dataType: 'json',
+                contantType: 'application/json',
+                success: function(response) {
+                    console.log(response);
+                    var numb = 0;
+                    $.each(response, function(key, value) {
+                        $("#sortPageForSearch").append(`<option value='${value.id}'>${value.sortTitle}</option>`);
+
+                    });
+                }
+
+            });
+        }
+
+////////////////////////////////////////////////////////////////////////////////////
+        $("#SearchForAllButton").click(function(){
+               var filterCommodityRequests = [];
+               
+            var title = $("#titleForSearch").val();
+            
+            if(title!=null && title!=undefined && title!=""){
+                var filterCommodityRequest = {
+                     "criteriaForSearchCommodity": "BY_TITLE_LIKE",
+                    "firstValue": title
+                }
+                filterCommodityRequests.push(filterCommodityRequest);
+            }
+            var developer = $("#developerForSearch").val();
+            console.log("developer is working = "+developer);
+            if(developer!=null && developer!=undefined && developer!=""){
+               var filterCommodityRequest = {
+                     "criteriaForSearchCommodity": "BY_DEVELOPER_LIKE",
+                    "firstValue": developer
+                }
+                filterCommodityRequests.push(filterCommodityRequest);
+            }
+            
+            var priceFrom =  $("#priceFrom").val();
+             var priceTo = $("#priceTo").val();
+            if(priceFrom!=null && priceFrom!=undefined && priceFrom!="" && priceTo!=null && priceTo!=undefined && priceTo!=""){
+               var filterCommodityRequest = {
+                     "criteriaForSearchCommodity": "BY_PRICE_BETWEEN",
+                    "firstValue": priceFrom,
+                   "secondValue": priceTo
+                }
+                filterCommodityRequests.push(filterCommodityRequest);
+            }
+           
+           
+            var typeId = $("select#typePageForSearch option:checked").text();
+            if(typeId!=null && typeId!=undefined && typeId!="choose type"){
+                var filterCommodityRequest = {
+                     "criteriaForSearchCommodity": "BY_TYPE_LIKE",
+                    "firstValue": typeId
+                }
+                filterCommodityRequests.push(filterCommodityRequest);
+            }
+            var sortId = $("select#sortPageForSearch option:checked").text();
+            if(sortId!=null && sortId!=undefined && sortId!="choose sort"){
+               var filterCommodityRequest = {
+                     "criteriaForSearchCommodity": "BY_SORT_LIKE",
+                    "firstValue": sortId
+                }
+                filterCommodityRequests.push(filterCommodityRequest);
+            }
+            var state = $("select#statePageForSearch option:checked").text();
+            if(state!=null && state!=undefined && state!="choose state"){
+                var filterCommodityRequest = {
+                     "criteriaForSearchCommodity": "BY_STATE_LIKE",
+                    "firstValue": state
+                }
+                filterCommodityRequests.push(filterCommodityRequest);
+            }
+            
+            
+            $("#titleForSearch").val('');
+            $("#developerForSearch").val('');
+            $("#priceFrom").val('');
+            $("#priceTo").val('');
+            $("#titleForSearch").val('');
+            console.log($("#titleForSearch").val()+ "lalalla");
+            
+            var filter ={
+                filterCommodityRequests:filterCommodityRequests
+            };
+            
+            console.log(filterCommodityRequests);
+         //////////////////
+             $.ajax({
+                url: 'http://localhost:8080/commodity/filterByAll',
+                type: 'POST',
+                dataType: 'json',
+                contentType: 'application/json',
+                data:JSON.stringify(filter),
+                success: function(response) {
+                    console.log("complete");
+                    console.log(response);
+                    $(".products").empty();
+                    count = 0;
+                     $.each(response, function(key, value) {
+                        // let ratingStar=★;
+                        count++;
+                        $('.products').append(
+                            `
+
+           <div class="col-lg-3 col-sm-6 product-border" >
+                    <div class="product-item">
+                        <div class="pi-pic">
+                            <img class="img-config" src=".${value.picture}" alt="">
+                            <div class="pi-links">
+                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                                <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                            </div>
+                        </div>
+                        <div class="pi-text">
+                            <hr/>
+                            <h6>$${value.price}</h6>
+                            <p class="clickToHide" id="tid${count}">${value.commodityTitle}</p>
+                        </div>
+                    </div>
+            </div>
+
+ 
+
+
+
+<div class="col-lg-6 product-border id="itid${count}" >
+
+                        <div class="row" > 
+                                    <div class="col">
+                                            <h5>Description:</h5>
+                                            <p>${value.description}</p>
+                                            <hr/>  
+                                    </div>
+                        
+                        </div>
+
+                        <div class="row" >
+                                    <div class="col-md-4" >
+                                        <h6>Date of adding:</h6>
+                                        <p>${value.dateOfAdding}</p>
+                                        <h6>Location:</h6>
+                                        <p>${value.location.titleOfCity}/${value.location.titleOfStreet} ||${value.location.numberOfHouse}/${value.location.numberOfFlat}</p>
+                                        
+                                    </div>
+
+
+                                    <div class="col-md-4" >
+                                                <h6>State:</h6>
+                                                <p>${value.state}</p>
+                                                <h6>Type and Sort </h6>
+                                                <p>${value.type} ${value.sort}</p>
+                                                
+                                               
+                                    </div>
+
+
+
+                                    <div class="col-md-4">
+                                                
+                                                <h6>number of available: ${value.inStock}</h6>
+                                                <p></p>
+                                                <h6>Seller:</h6>
+                                                <p>${value.userSeller}</p>
+                                                <h6>Developer:</h6>
+                                                <p>${value.developer}</p>
+                                            
+                                                
+                                            
+                                    </div>
+
+                       </div>   
+                        
+                        <div class="row" >
+                                                <div class="col">
+                                                        
+                                                </div>
+                                                <div class="col">
+                                                        <button class="site-btn " type="submit" onclick="return addToCart(${value.id})" >add to cart</button>
+                                                </div>
+                                                <div class="col">
+                                                        
+                                                </div>
+
+                        </div>
+                                                                      
+
+</div>
+
+
+                                `
+                        );
+
+                    });
+                  
+                    
+                }
+            });
+            
+        });
+        
+        
+  //////////////////////////////////////////////////////////////////////////////////////      
+        
+    function getCommodityFullBySimple(myKey){
+       
+            $.ajax({
+                url: serverUrl + myKey,
+                method: 'GET',
+                dataType: 'json',
+                contantType: 'application/json',
+                success: function(response) {
+                    console.log(response);
+                    $(".products").empty();
+                    count = 0;
+                    $.each(response, function(key, value) {
+                        // let ratingStar=★;
+                        count++;
+                        $('.products').append(
+                            `
+    
+
+           <div class="col-lg-3 col-sm-6 product-border" >
+                    <div class="product-item">
+                        <div class="pi-pic">
+                            <img class="img-config" src=".${value.picture}" alt="">
+                            <div class="pi-links">
+                                <a href="#" class="add-card"><i class="flaticon-bag"></i><span>ADD TO CART</span></a>
+                                <a href="#" class="wishlist-btn"><i class="flaticon-heart"></i></a>
+                            </div>
+                        </div>
+                        <div class="pi-text">
+                            <hr/>
+                            <h6>$${value.price}</h6>
+                            <p class="clickToHide" id="tid${count}">${value.commodityTitle}</p>
+                        </div>
+                    </div>
+            </div>
+
+ 
+
+
+
+<div class="col-lg-6 product-border id="itid${count}" >
+
+                        <div class="row" > 
+                                    <div class="col">
+                                            <h5>Description:</h5>
+                                            <p>${value.description}</p>
+                                            <hr/>  
+                                    </div>
+                        
+                        </div>
+
+                        <div class="row" >
+                                    <div class="col-md-4" >
+                                        <h6>Date of adding:</h6>
+                                        <p>${value.dateOfAdding}</p>
+                                        <h6>Location:</h6>
+                                        <p>${value.location.titleOfCity}/${value.location.titleOfStreet} ||${value.location.numberOfHouse}/${value.location.numberOfFlat}</p>
+                                        
+                                    </div>
+
+
+                                    <div class="col-md-4" >
+                                                <h6>State:</h6>
+                                                <p>${value.state}</p>
+                                                <h6>Type and Sort </h6>
+                                                <p>${value.type} ${value.sort}</p>
+                                                
+                                               
+                                    </div>
+
+
+
+                                    <div class="col-md-4">
+                                                
+                                                <h6>number of available: ${value.inStock}</h6>
+                                                <p></p>
+                                                <h6>Seller:</h6>
+                                                <p>${value.userSeller}</p>
+                                                <h6>Developer:</h6>
+                                                <p>${value.developer}</p>
+                                            
+                                                
+                                            
+                                    </div>
+
+                       </div>   
+                        
+                        <div class="row" >
+                                                <div class="col">
+                                                        
+                                                </div>
+                                                <div class="col">
+                                                        <button class="site-btn " type="submit" onclick="return addToCart(${value.id})" >add to cart</button>
+                                                </div>
+                                                <div class="col">
+                                                        
+                                                </div>
+
+                        </div>
+                                                                      
+
+</div>
+
+
+                                `
+                        );
+
+                    });
+
+                }
+
+            })
+
+        }
+////////////////////////////////////////////////////////////////
+
+                   
+    
+
+
+
+        ///////////////////////////experiment   
+
+        /*$(document).on('click',showHide(){
+    console.log(count+" num");
+     for(var i=1;i<=count;i++){
+                // document.getElementById ("tid"+i).addEventListener ("click",function(){
+                var key = "#itid"+i;
+                console.log(key);
+                $(key).css('display','hide');
+                // });
+                $(document).on('click', 'key', function(){
+                    alert('work');
+                 console.log(key);
+                $(key).css('display','hide');
+                });
+            }
+           
+        });*/
+
+        /*  $(document).ajaxComplete(
+        document.addEventListener("click",function(e){
+           if(e.target && e.target.className=="clickToHide"){
+               console.log("alilua");
+                document.getElementById("itid1").append(`
+<div></div>
+`);
+             ;
+           } 
+        }));*/
+
+    </script>
+
+
+
+    <script src="adminPage.html"></script>
+    <script src="jsForEntities/commodity.js"></script>
+    <script src="jsForEntities/category.js"></script>
+    <!--====== Javascripts & Jquery ======-->
+
+
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.nicescroll.min.js"></script>
+    <script src="js/jquery.zoom.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/main.js"></script>
+
+
+
+</body>
+
+</html>

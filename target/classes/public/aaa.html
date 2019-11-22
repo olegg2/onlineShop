@@ -1,0 +1,48 @@
+  <div class="row">  
+                            <div class="col">
+                                    <h5>Description:</h5>
+                                    <p>${value.description}</p>
+                            </div>
+                        </div>
+
+
+                        <div class="row" style="border: 5px solid red;>
+                                    <div class="col-md-4" >
+                                        <h6>Date of adding:</h6>
+                                        <p>${value.dateOfAdding}</p>
+                                        <h6>Location:</h6>
+                                        <p>${value.location.titleOfCity}/${value.location.titleOfStreet} ||  ${value.location.numberOfHouse}/${value.location.numberOfFlat}</p>
+                                        
+                                    </div>
+
+
+                                    <div class="col-md-4" >
+                                                <h6>State:</h6>
+                                                <p>${value.state}</p>
+                                                <h6>Type and Sort </h6>
+                                                <p>${value.type} ${value.sort}</p>
+                                                
+                                               
+                                    </div>
+
+
+
+                                    <div class="col-md-4">
+                                                
+                                                <h6>number of available: ${value.inStock}</h6>
+                                                <p></p>
+                                                <h6>Seller:</h6>
+                                                <p>${value.userSeller}</p>
+                                                
+                                            
+                                    </div>
+
+                        </div>
+
+                            <div class="row">
+                                                                      
+                                    <div class="col" >
+                                        <button class="site-btn sb-white" type="submit" >buy</button>
+                                    </div>
+                            </div>
+</div>
